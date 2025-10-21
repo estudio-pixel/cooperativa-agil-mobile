@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "382425800575",
+    "project_id": "cooperativa-agil",
+    "storage_bucket": "cooperativa-agil.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382425800575:android:f59728af79cbad0ae2044a",
+        "android_client_info": {
+          "package_name": "com.cooperativaagil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATcA8mCK9zt87XjdGfRqFcQMhryKOWzwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
