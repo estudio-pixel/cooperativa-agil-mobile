@@ -5,9 +5,9 @@
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>cooperativaagil</string>
+	<string>Cooperativa Ágil</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -33,10 +33,20 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Permitir acesso à sua câmera para tirar fotos</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Permitir notificações para receber atualizações</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Usamos sua localização para confirmar sua presença no local de trabalho durante o expediente. Sua localização é acessada apenas enquanto você estiver em serviço.</string>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>Permitir notificações para receber atualizações</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

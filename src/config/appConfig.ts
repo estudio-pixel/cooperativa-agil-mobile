@@ -1,6 +1,6 @@
 export const CONFIG = {
   sourceUri: 'https://cooperativaagil.com.br/cooperado/dashboard',
-  isDevelopment: true,
+  isDevelopment: false,
   get baseUrl() {
     return this.isDevelopment 
       ? 'http://localhost:3000' 
