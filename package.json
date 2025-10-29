@@ -7,7 +7,13 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "version:alpha": "npm version prerelease --preid=alpha && npm run sync:versions",
+    "version:beta": "npm version prerelease --preid=beta && npm run sync:versions",
+    "version:patch": "npm version patch && npm run sync:versions",
+    "version:minor": "npm version minor && npm run sync:versions",
+    "version:major": "npm version major && npm run sync:versions",
+    "sync:versions": "node scripts/sync-versions.js"
   },
   "dependencies": {
     "@react-native-community/geolocation": "^3.4.0",
