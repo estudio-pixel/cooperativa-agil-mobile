@@ -83,8 +83,8 @@ android {
         applicationId "com.cooperativaagil"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 10000099
-        versionName "1.0.0"
+        versionCode 10010099
+        versionName "1.0.1"
     }
     signingConfigs {
         debug {
