@@ -11,7 +11,7 @@ import {
   sendLocationToBackend
 } from '../services/locationService';
 
-export const useAppInitialization = () => {
+export const useAppInitialization = (displayNotification: (remoteMessage: any) => void) => {
   useEffect(() => {
     const initializeApp = async () => {
       try {
@@ -23,7 +23,7 @@ export const useAppInitialization = () => {
 
         await getFCMToken();
 
-      setupNotificationHandlers();
+      setupNotificationHandlers(displayNotification);
       
       const authToken = await authenticateAnonymously();
       

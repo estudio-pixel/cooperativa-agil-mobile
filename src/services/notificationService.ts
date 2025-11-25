@@ -1,21 +1,7 @@
 import messaging, { FirebaseMessagingTypes } from '@react-native-firebase/messaging';
-import { Alert, PermissionsAndroid, Platform } from 'react-native';
+import { PermissionsAndroid, Platform } from 'react-native';
 import { CONFIG } from '../config/appConfig';
 import { createTopicName } from '../utils/textUtils';
-
-export const displayNotification = (remoteMessage: FirebaseMessagingTypes.RemoteMessage) => {
-  const { notification } = remoteMessage;
-  
-  if (notification) {
-    const title = notification.title || CONFIG.notifications.defaultTitle;
-    const body = notification.body || CONFIG.notifications.defaultBody;
-    
-    Alert.alert(
-      title,
-      body,
-    );
-  }
-};
 
 export const requestNotificationPermission = async (): Promise<boolean> => {
   try {
@@ -110,7 +96,7 @@ export const subscribeToLocationTopic = async (city: string, state?: string, cou
   }
 };
 
-export const setupNotificationHandlers = (): void => {
+export const setupNotificationHandlers = (displayNotification: (remoteMessage: FirebaseMessagingTypes.RemoteMessage) => void): void => {
   messaging().onMessage(async remoteMessage => {
     console.log('Notificação recebida em foreground:', remoteMessage);
     displayNotification(remoteMessage);
